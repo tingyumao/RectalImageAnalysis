@@ -1,0 +1,21 @@
+Cross validation: Repeated random sub-sampling validation
+
+Repeat the following process for k=100 times.
+1. Randomly separate 165 samples into 137 training samples and 28(18 from class1 and 10 from class2) validation samples.
+2. Train linear svm for this binary classification problem.
+
+Then select out the top 12 features in terms of their average weight in these 100 training.
+
+Reapply random sub-sampling validation to these 12 features, ie., retrain the model with 12 selected features for k=100 times with random fold of train/validation dataset.
+
+
+After cross validation
+Radiomics: [3231, 3230, 2964, 2516, 677, 5134, 5133, 1847, 3224, 3763, 3306, 4926], these are column index starting from 0. And the order implies their priority.
+
+Clinical: ['xingbie', '淋巴结送检', 'Nstage-R2', 'N分期标准-R2', '病理类型', '肛距-R2', 'MR分段-R2', '手术方式', '病理N分期', 'CJ分段-R2', '病理T分期', 'Age']
+
+All: [3258, 3257, 2991, 3251, 704, 5161, 5160, 2543, '病理M分期', 3790, 1874, 'xingbie’].
+
+
+More prediction results are recored in FeatureSurvival.html. Please use any web browser to open the file.
+
